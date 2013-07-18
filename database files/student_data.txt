@@ -1,0 +1,105 @@
+# This is a list of student data. The "supervisors" column lists each
+# student's supervisors (some do not yet have one). The "club" column
+# lists the clubs that the student belongs to.
+#
+first_name|last_name|city|supervisors|status|club
+Cara|Rogers|New Britain|Tennant/Room 101|Sophomore|Chess, Improvisation, Rugby, Debate
+Ori|Mejia|Lakeland||Senior|Debate
+Leandra|Stevens|Rockford||Freshman|
+Danielle|Moody|Oro Valley|Baker/Room 315, Eccleston/Room 205|Sophomore|Improvisation
+Josiah|Barber|Rancho Cordova||Sophomore|
+Wing|Gordon|Reedsport|Baker/Room 315|Freshman|Rugby, Chess, Football
+Ryder|Schneider|Boston|Baker/Room 315|Freshman|Debate, Improvisation
+Eagan|Hogan|Wichita Falls||Senior|Football, Improvisation, Debate, Chess
+Libby|Osborn|Henderson|Baker/Room 315, Tennant/Room 101|Sophomore|
+Leroy|Kent|Fort Dodge|Eccleston/Room 205|Junior|
+Sandra|Carrillo|Two Rivers||Junior|Improvisation
+Raya|Thompson|Wilmington||Senior|
+Jael|Craig|Forest Lake|Baker/Room 315|Junior|Debate, Chess
+Joshua|Forbes|Mentor|Baker/Room 315|Junior|Debate, Rugby, Chess
+Eve|Hinton|Ruston|Baker/Room 315|Junior|
+Porter|Mayer|Peekskill||Sophomore|Football, Rugby
+Brynne|Barry|Attleboro|Smith/Room 210, Eccleston/Room 205|Senior|
+Mari|Ballard|St. Marys||Sophomore|
+Lev|Richards|Fairfield|Smith/Room 210|Freshman|
+Benedict|Atkinson|Shamokin|Baker/Room 315, Tennant/Room 101|Freshman|
+Kelly|Navarro|Eureka|Eccleston/Room 205, Tennant/Room 101|Sophomore|Rugby
+Hope|Finch|Easthampton||Junior|Improvisation, Rugby, Debate, Football
+Magee|Petersen|College Park|Eccleston/Room 205, Tennant/Room 101|Junior|Chess
+Marsden|Hoffman|Birmingham|Tennant/Room 101, Smith/Room 210|Senior|Football
+Shea|Bartlett|Downey||Junior|Debate
+Chancellor|Hines|Valdosta||Junior|Debate, Chess, Football
+Tamara|Stewart|Jeffersonville||Junior|
+Wade|Powers|Richland|Smith/Room 210, Baker/Room 315|Sophomore|Improvisation, Rugby, Debate
+Ivy|Trujillo|Lewiston|Baker/Room 315, Tennant/Room 101|Sophomore|Improvisation, Chess, Rugby, Debate
+Ethan|Garner|Fresno||Sophomore|Football, Rugby, Debate
+Damon|Duke|Lodi|Baker/Room 315, Tennant/Room 101|Freshman|Football, Rugby, Improvisation, Debate
+Lacey|Bryant|Cairo|Smith/Room 210, Baker/Room 315|Senior|Rugby
+Evelyn|Chapman|Richmond|Smith/Room 210, Eccleston/Room 205|Junior|
+Aphrodite|Maldonado|Aliso Viejo||Senior|Improvisation, Chess, Rugby
+Mariko|Rose|Taylorsville|Smith/Room 210|Freshman|Debate, Rugby, Football, Chess
+Kirsten|Cain|Hammond|Eccleston/Room 205|Junior|Debate
+Oleg|Bell|Lima|Tennant/Room 101|Sophomore|Debate
+Rudyard|Joyce|Binghamton||Sophomore|
+Geoffrey|Reid|Wichita Falls|Eccleston/Room 205, Baker/Room 315|Sophomore|Rugby, Football, Improvisation, Debate
+Suki|Roberson|Slidell|Smith/Room 210, Eccleston/Room 205|Freshman|Chess
+Adara|Hahn|Lynchburg|Smith/Room 210, Tennant/Room 101|Senior|Improvisation
+Galena|Zimmerman|Fullerton||Junior|Chess, Improvisation, Football, Rugby
+Demetrius|Barnes|Albuquerque|Baker/Room 315, Smith/Room 210|Junior|Football, Rugby, Chess, Improvisation
+Hollee|Fisher|Radford|Tennant/Room 101, Eccleston/Room 205|Sophomore|Rugby
+Jescie|Best|Attleboro|Baker/Room 315|Senior|Debate, Football, Rugby
+Jarrod|Bird|Peru||Freshman|
+Timothy|Gordon|Troy|Smith/Room 210, Eccleston/Room 205|Sophomore|Improvisation, Chess, Rugby
+Germaine|Tanner|Saint Joseph||Freshman|Improvisation, Football, Chess, Debate
+Priscilla|Potter|Newport News|Tennant/Room 101|Senior|
+Hilel|Kemp|Bakersfield||Sophomore|Improvisation, Debate, Rugby
+Reagan|Goodwin|Nashville|Baker/Room 315|Freshman|
+Ruth|Cole|Selma|Baker/Room 315, Eccleston/Room 205|Sophomore|Rugby
+Ann|Levy|Port Huron|Eccleston/Room 205|Junior|Chess, Debate, Improvisation
+Jasper|Dyer|Covington||Senior|Football
+Tasha|Leonard|Compton|Smith/Room 210|Sophomore|
+Philip|Parks|La Verne|Eccleston/Room 205, Baker/Room 315|Sophomore|Debate, Rugby
+Reagan|Slater|Aspen|Tennant/Room 101, Baker/Room 315|Junior|Improvisation
+Austin|Robles|Idaho Springs|Tennant/Room 101|Junior|Improvisation, Football
+Inga|Hendricks|Fairmont|Eccleston/Room 205|Senior|Football, Debate, Rugby
+Demetrius|Mays|Ogden|Baker/Room 315, Tennant/Room 101|Senior|
+Amber|Lawson|Coatesville||Senior|Improvisation, Chess, Football
+Fritz|Mccormick|Saipan|Tennant/Room 101, Eccleston/Room 205|Senior|Improvisation, Chess
+Yeo|Bryant|West Allis||Freshman|
+Noble|Vazquez|Glendale|Baker/Room 315|Freshman|Chess
+Florence|Lang|Mentor||Freshman|Improvisation
+Amaya|Holland|Cedar Falls|Baker/Room 315|Freshman|Improvisation, Football, Chess, Rugby
+Nash|Britt|Rawlins||Freshman|Improvisation, Debate
+Laurel|Russo|Columbia|Baker/Room 315, Smith/Room 210|Junior|
+Aileen|Wilkinson|Cody|Baker/Room 315, Tennant/Room 101|Junior|
+Rachel|Brown|Corvallis|Baker/Room 315, Eccleston/Room 205|Senior|Football, Improvisation, Rugby
+Stuart|Little|Seal Beach||Freshman|Chess, Football
+Ruby|Dodson|Fairfax||Freshman|Football, Debate, Rugby
+Gisela|Howe|Lincoln||Junior|Chess, Football, Improvisation, Rugby
+Karleigh|Case|Indio|Tennant/Room 101, Baker/Room 315|Freshman|Rugby, Chess
+Alfreda|Hanson|Perth Amboy|Smith/Room 210|Junior|Football, Debate
+Iola|Gallegos|Rancho Cucamonga|Smith/Room 210, Tennant/Room 101|Junior|Rugby, Debate, Chess
+Eagan|Reese|Janesville|Tennant/Room 101, Eccleston/Room 205|Freshman|
+Gage|Stevenson|Hackensack||Junior|Improvisation, Chess
+Kasper|Stephenson|Oil City|Eccleston/Room 205, Smith/Room 210|Senior|Rugby, Chess
+Xantha|Michael|Ansonia||Sophomore|
+Hedley|Cardenas|West Warwick||Senior|Debate, Chess, Improvisation
+Hedley|Meadows|Fairbanks|Smith/Room 210|Junior|
+Nerea|Whitney|Miami Beach|Baker/Room 315|Junior|Improvisation, Football
+Gabriel|Clarke|North Adams|Eccleston/Room 205|Sophomore|Debate, Improvisation, Rugby, Football
+Jaden|Coleman|Washington||Senior|Rugby, Debate, Football
+Orson|Morin|Klamath Falls|Baker/Room 315|Sophomore|
+Maya|Mccullough|Hartford|Tennant/Room 101|Freshman|Rugby, Chess
+Elvis|Ballard|Cambridge|Eccleston/Room 205, Baker/Room 315|Junior|Debate, Chess, Football
+Josephine|Wilkinson|Batavia|Tennant/Room 101, Eccleston/Room 205|Senior|Football, Improvisation, Rugby
+Elmo|Webb|South Portland|Tennant/Room 101|Senior|
+Simone|Velez|Martinsburg|Baker/Room 315, Smith/Room 210|Junior|Chess, Rugby
+Shaeleigh|Mercado|Las Vegas|Baker/Room 315, Smith/Room 210|Freshman|Rugby, Chess, Football, Debate
+Haley|Cash|Chino Hills|Smith/Room 210, Tennant/Room 101|Sophomore|
+Megan|Bates|Fort Wayne||Sophomore|Rugby
+Ariel|Hopkins|Meriden||Senior|Football, Debate, Improvisation
+Barclay|Herman|Portsmouth|Eccleston/Room 205|Junior|Rugby, Debate, Improvisation, Football
+Ira|Rowe|Valparaiso|Baker/Room 315, Smith/Room 210|Senior|Chess
+Amity|Quinn|Joliet|Smith/Room 210, Tennant/Room 101|Sophomore|Football, Rugby, Chess, Improvisation
+Dustin|Forbes|Gadsden||Junior|Debate, Chess, Football, Rugby
+Holmes|Downs|Denver|Tennant/Room 101, Baker/Room 315|Junior|Improvisation, Chess, Debate

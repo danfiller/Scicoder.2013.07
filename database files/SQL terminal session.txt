@@ -1,0 +1,233 @@
+Notes:
+
+- Don't forget the UPDATE statement below updated ALL the students!
+- To delete all rows from a table:
+	DELETE FROM table;
+	or
+	DELETE * FROM table;
+- To delete some rows, add a WHERE clause:
+	DELELE FROM table WHERE ...
+
+172-26-146-190 [~/Desktop] % sqlite3 student_data.sqlite 
+SQLite version 3.6.12
+Enter ".help" for instructions
+Enter SQL statements terminated with a ";"
+sqlite> SELECT count(*) FROM student;
+100
+sqlite> SELECT count(first_name) FROM student;
+100
+sqlite> SELECT * FROM student LIMIT 5;
+1|Cara|Rogers|1
+2|Ori|Mejia|2
+3|Leandra|Stevens|3
+4|Danielle|Moody|1
+5|Josiah|Barber|1
+sqlite> SELECT first_name FROM student limit 5;
+Cara
+Ori
+Leandra
+Danielle
+Josiah
+sqlite> SELECT first_name FROM student ORDER BY first_name LIMIT 5;
+Adara
+Aileen
+Alfreda
+Amaya
+Amber
+sqlite> SELECT first_name FROM student ORDER BY first_name DESC LIMIT 5;
+Yeo
+Xantha
+Wing
+Wade
+Timothy
+sqlite> SELECT first_name, last_name FROM student 
+   ...> ORDER BY last_name DESC LIMIT 5;
+Galena|Zimmerman
+Aileen|Wilkinson
+Josephine|Wilkinson
+Nerea|Whitney
+Elmo|Webb
+sqlite> SELECT first_name, last_name FROM student WHERE id = 5;
+Josiah|Barber
+sqlite> SELECT first_name, last_name FROM student WHERE first_name LIKE 'A%';
+Aphrodite|Maldonado
+Adara|Hahn
+Ann|Levy
+Austin|Robles
+Amber|Lawson
+Amaya|Holland
+Aileen|Wilkinson
+Alfreda|Hanson
+Ariel|Hopkins
+Amity|Quinn
+sqlite> SELECT first_name, last_name FROM student WHERE id BETWEEN 10 AND 15;
+Leroy|Kent
+Sandra|Carrillo
+Raya|Thompson
+Jael|Craig
+Joshua|Forbes
+Eve|Hinton
+sqlite> SELECT id, first_name, last_name FROM student WHERE id BETWEEN 10 AND 15;
+10|Leroy|Kent
+11|Sandra|Carrillo
+12|Raya|Thompson
+13|Jael|Craig
+14|Joshua|Forbes
+15|Eve|Hinton
+sqlite> SELECT id, first_name, last_name FROM student WHERE id IN (15, 23, 6, 56, 9);;
+6|Wing|Gordon
+9|Libby|Osborn
+15|Eve|Hinton
+23|Magee|Petersen
+56|Philip|Parks
+sqlite> SELECT id, first_name, last_name FROM student WHERE first_name IN 
+   ...> ('Libby', 'Philip');
+9|Libby|Osborn
+56|Philip|Parks
+sqlite> SELECT sum(id) FROM student;
+5050
+sqlite> SELECT min(id) FROM student;
+1
+sqlite> SELECT max(id) FROM student;
+100
+sqlite> SELECT avg(id) FROM student;
+50.5
+sqlite> SELECT sum(id), first_name FROM student;
+5050|Holmes
+sqlite> SELECT first_name, last_name, label FROM student JOIN status ON
+   ...> student.status_id = status.id LIMIT 5;
+Cara|Rogers|Sophomore
+Ori|Mejia|Senior
+Leandra|Stevens|Freshman
+Danielle|Moody|Sophomore
+Josiah|Barber|Sophomore
+sqlite> SELECT student.first_name, student.last_name, status.label FROM student JOIN status ON
+   ...> student.status_id = status.id LIMIT 5;                                           Cara|Rogers|Sophomore
+Ori|Mejia|Senior
+Leandra|Stevens|Freshman
+Danielle|Moody|Sophomore
+Josiah|Barber|Sophomore
+sqlite> SELECT first_name, last_name, name FROM student JOIN 
+   ...> student_to_club ON student_to_club.student_id=student.id
+   ...> JOIN club ON student_to_club.club_id=club.id LIMIT 5;
+Cara|Rogers|Chess
+Cara|Rogers|Improvisation
+Cara|Rogers|Rugby
+Cara|Rogers|Debate
+Ori|Mejia|Debate
+sqlite> SELECT first_name, last_name, name FROM student 
+   ...> JOIN student_to_club ON student_to_club.student_id=student.id
+   ...> JOIN club ON student_to_club.club_id=club.id
+   ...> WHERE name ='Chess' LIMIT 5;
+Cara|Rogers|Chess
+Wing|Gordon|Chess
+Eagan|Hogan|Chess
+Jael|Craig|Chess
+Joshua|Forbes|Chess
+sqlite> SELECT 5+5;
+10
+sqlite> .schema
+CREATE TABLE "Club" ("id" INTEGER PRIMARY KEY  NOT NULL ,"name" TEXT NOT NULL );
+CREATE TABLE "Status" ("id" INTEGER PRIMARY KEY  NOT NULL ,"label" TEXT NOT NULL );
+CREATE TABLE "Student" ("id" INTEGER PRIMARY KEY  NOT NULL ,"first_name" TEXT NOT NULL ,"last_name" TEXT NOT NULL , "status_id" INTEGER NOT NULL  DEFAULT 0);
+CREATE TABLE "student_to_club" ("student_id" INTEGER NOT NULL , "club_id" INTEGER NOT NULL , PRIMARY KEY ("student_id", "club_id"));
+CREATE TABLE "student_to_supervisor" ("student_id" INTEGER NOT NULL , "supervisor_id" INTEGER NOT NULL , PRIMARY KEY ("student_id", "supervisor_id"));
+CREATE TABLE "supervisor" ("id" INTEGER PRIMARY KEY  NOT NULL ,"name" TEXT NOT NULL ,"room" TEXT NOT NULL );
+sqlite> CREATE VIEW student_clubs AS 
+   ...> SELECT first_name, last_name, name FROM student
+   ...> JOIN student_to_club ON student_to_club.student_id=student.id
+   ...> JOIN club ON student_to_club.club_id=club.id;
+sqlite> select * from student_clubs LIMIT 5;
+Cara|Rogers|Chess
+Cara|Rogers|Improvisation
+Cara|Rogers|Rugby
+Cara|Rogers|Debate
+Ori|Mejia|Debate
+sqlite> .schema
+CREATE TABLE "Club" ("id" INTEGER PRIMARY KEY  NOT NULL ,"name" TEXT NOT NULL );
+CREATE TABLE "Status" ("id" INTEGER PRIMARY KEY  NOT NULL ,"label" TEXT NOT NULL );
+CREATE TABLE "Student" ("id" INTEGER PRIMARY KEY  NOT NULL ,"first_name" TEXT NOT NULL ,"last_name" TEXT NOT NULL , "status_id" INTEGER NOT NULL  DEFAULT 0);
+CREATE TABLE "student_to_club" ("student_id" INTEGER NOT NULL , "club_id" INTEGER NOT NULL , PRIMARY KEY ("student_id", "club_id"));
+CREATE TABLE "student_to_supervisor" ("student_id" INTEGER NOT NULL , "supervisor_id" INTEGER NOT NULL , PRIMARY KEY ("student_id", "supervisor_id"));
+CREATE TABLE "supervisor" ("id" INTEGER PRIMARY KEY  NOT NULL ,"name" TEXT NOT NULL ,"room" TEXT NOT NULL );
+CREATE VIEW student_clubs AS 
+SELECT first_name, last_name, name FROM student
+JOIN student_to_club ON student_to_club.student_id=student.id
+JOIN club ON student_to_club.club_id=club.id;
+sqlite> SELECT DISTINCT(first_name) FROM student LIMIT 5;
+Adara
+Aileen
+Alfreda
+Amaya
+Amber
+sqlite> SELECT COUNT(DISTINCT(first_name)) FROM student;
+96
+sqlite> INSERT INTO student (first_name, last_name, status_id) VALUES
+   ...> ('Egon', 'Spengler', 4);
+sqlite> SELECT count(*) FROM student;
+101
+sqlite> SELECT * FROM student WHERE id = (SELECT id FROM student WHERE first_name = 'Egon');
+101|Egon|Spengler|4
+sqlite> UPDATE student SET status_id = (SELECT id FROM status WHERE label='Freshman');
+sqlite> SELECT * FROM student WHERE id = 101;101|Egon|Spengler|3
+sqlite> select * FROM status;
+1|Sophomore
+2|Senior
+3|Freshman
+4|Junior
+sqlite> ^D172-26-146-190 [~/Desktop] % 
+172-26-146-190 [~/Desktop] % 
+172-26-146-190 [~/Desktop] % sqlite3
+SQLite version 3.6.12
+Enter ".help" for instructions
+Enter SQL statements terminated with a ";"
+sqlite> ^D172-26-146-190 [~/Desktop] % sqlite3 --help
+Usage: sqlite3 [OPTIONS] FILENAME [SQL]
+FILENAME is the name of an SQLite database. A new database is created
+if the file does not previously exist.
+OPTIONS include:
+   -init filename       read/process named file
+   -echo                print commands before execution
+   -[no]header          turn headers on or off
+   -bail                stop after hitting an error
+   -interactive         force interactive I/O
+   -batch               force batch I/O
+   -column              set output mode to 'column'
+   -csv                 set output mode to 'csv'
+   -html                set output mode to HTML
+   -line                set output mode to 'line'
+   -list                set output mode to 'list'
+   -separator 'x'       set output field separator (|)
+   -nullvalue 'text'    set text string for NULL values
+   -version             show SQLite version
+172-26-146-190 [~/Desktop] % sqlite3 student_data.sqlite < "SELECT * FROM student LIMIT 5"
+SELECT * FROM student LIMIT 5: No such file or directory.
+172-26-146-190 [~/Desktop] % echo "SELECT * FROM student LIMIT 5" | sqlite3 student_data.sqlite
+Incomplete SQL: SELECT * FROM student LIMIT 5
+172-26-146-190 [~/Desktop] % echo "SELECT * FROM student LIMIT 5;" | sqlite3 student_data.sqlite
+1|Cara|Rogers|3
+2|Ori|Mejia|3
+3|Leandra|Stevens|3
+4|Danielle|Moody|3
+5|Josiah|Barber|3
+172-26-146-190 [~/Desktop] % echo "SELECT * FROM student LIMIT 5;" | sqlite3 -separator 'xxx' student_data.sqlite 
+1xxxCaraxxxRogersxxx3
+2xxxOrixxxMejiaxxx3
+3xxxLeandraxxxStevensxxx3
+4xxxDaniellexxxMoodyxxx3
+5xxxJosiahxxxBarberxxx3
+172-26-146-190 [~/Desktop] % echo "SELECT * FROM student LIMIT 5;" | sqlite3 -header -separator '+' student_data.sqlite
+id+first_name+last_name+status_id
+1+Cara+Rogers+3
+2+Ori+Mejia+3
+3+Leandra+Stevens+3
+4+Danielle+Moody+3
+5+Josiah+Barber+3
+172-26-146-190 [~/Desktop] % echo "SELECT * FROM student LIMIT 5;" | sqlite3 -header -separator ' ' student_data.sqlite
+id first_name last_name status_id
+1 Cara Rogers 3
+2 Ori Mejia 3
+3 Leandra Stevens 3
+4 Danielle Moody 3
+5 Josiah Barber 3
+172-26-146-190 [~/Desktop] % 

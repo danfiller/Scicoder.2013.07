@@ -1,0 +1,13 @@
+print "hello world"
+print, "hello world"
+print("hello world")
+pwd
+print pwd
+source("/Users/danfiller/SCICODER/SciCoder.2013.07/R/Sample R data.txt")
+data=read.table("Sample R data.txt")
+data
+data=read.table("Sample R data.txt")
+data=read.table("Sample R data.txt", max.print=1000000)
+data=read.table("Sample R data.txt")
+data[1]
+data=read.table("Sample R data.txt", header=TRUE)
